@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{{ vacancy.title }}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="http://94.228.118.3:8000/documents/149/bootstrap.min.css" rel="stylesheet">
+  <link href="http://94.228.118.3:8000/documents/153/bootstrap-icons.css" rel="stylesheet">
+  <link href="http://94.228.118.3:8000/documents/151/aos.css" rel="stylesheet'}">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css'}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css'}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css'}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="http://94.228.118.3:8000/documents/147/main.css" rel="stylesheet">
+</head>
+
+<body class="page-blog">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="static/img/logo.png" alt=""> -->
+        <h1 class="d-flex align-items-center">Центр трудоустройства КТС</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/" class="active">Главная</a></li>
+          <li><a href="/">Вакансии</a></li>
+          <li><a href="/docs">Документы</a></li>
+          <li><a href="/admin">Вход</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('static/img/blog-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>{{ vacancy.title }}</h2>
+        <ol>
+          <li><a href="/">Главная</a></li>
+          <li>{{ vacancy.title }}</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="{{ vacancy.image.url }}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">{{ vacancy.title }}</h2>
+
+              <div class="content">
+                <p>
+                  {{ vacancy.description }}.
+                </p>
+                <h3>Ключевые навыки</h3>
+                <p>
+                 {{ vacancy.requirements }}
+                </p>
+                
+              </div><!-- End post content -->
+
+             
+            </article><!-- End blog post -->
+
+           
+
+            
+         
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    
+
+    <div class="footer-legal">
+      <div class="container">
+        <div class="copyright">
+          &copy; <strong><span>ЦСТВ "КТС"</span></strong>. Все права защищены
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer --><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="http://94.228.118.3:8000/documents/152/aos.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="http://94.228.118.3:8000/documents/148/main.js"></script>
+
+</body>
+
+</html>
